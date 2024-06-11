@@ -1,0 +1,257 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(270deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-size: 800% 800%;
+    animation: gradient 10s ease infinite;
+    color: #333;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header styles */
+header {
+    background: rgba(0, 119, 182, 0.9);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section styles */
+section {
+    padding: 6rem 2rem 2rem;
+    margin-top: 60px;
+}
+
+h2 {
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #0077b6;
+    font-weight: 600;
+}
+
+/* Introduction and project box styling */
+#introduction, .project {
+    background: #fff;
+    padding: 2rem;
+    margin: 4rem 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+#introduction:hover, .project:hover {
+    transform: translateY(-10px);
+    background-color: #f0f8ff;
+}
+
+#introduction p, .project p {
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.project h4 {
+    color: #008597;
+    margin-top: 1rem;
+    text-decoration:solid;
+}
+
+.project h5 {
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+footer {
+    background: rgba(0, 119, 182, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 5rem 1rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project,
+    #introduction {
+        padding: 1rem;
+    }
+}
+
+/* Adding top padding to the body to account for the fixed header */
+body {
+    padding-top: 70px;
+}
+
+/* Text gradient effect */
+.gradient-text {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+#introduction:hover, .project:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Certifications, Positions of Responsibility, and Contact box styling */
+.certifications-box, .responsibility-box, .contact-box {
+    background: #fff;
+    padding: 2rem;
+    margin: 4rem 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+.certifications-box:hover, .responsibility-box:hover, .contact-box:hover {
+    transform: translateY(-10px);
+    background-color: #f0f8ff;
+}
+
+.certifications-box ul, .responsibility-box ul, .contact-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.certifications-box li, .responsibility-box li, .contact-box li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.certifications-box a, .contact-box a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.certifications-box a:hover, .contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Skills box styling */
+.skills-box {
+    background: #fff;
+    padding: 2rem;
+    margin: 4rem 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+.skills-box:hover {
+    transform: translateY(-10px);
+    background-color: #f0f8ff;
+}
+
+.skills-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.skills-box li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Shadow text effect */
+.shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
